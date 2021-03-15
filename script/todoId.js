@@ -3,5 +3,6 @@ export const Id = {
     header : "header-title",
     addtask : "add-task",
     task : "task",
-    clear : "clear"
+    clear : "clear",
+    deletetask: "delete-task"
 };

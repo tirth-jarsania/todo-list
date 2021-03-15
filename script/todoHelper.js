@@ -1,6 +1,6 @@
 // submit the task
-import {Id} from './Id.js';
- 
+import {Id} from './todoId.js';
+
 //submit the task
 export const submit = e => {
     e.preventDefault();
@@ -11,10 +11,10 @@ export const submit = e => {
     ip.value ='';
 };
 // add the task
-function addTask(task) {
+function addTask(t) {
     let container = document.querySelector('ul');
     let node = document.createElement('li');
-    node.innerHTML = `<span class="delete-task">x</span><input type="checkbox"><label>${task}</label>`;
+    node.innerHTML = `<span class="delete-task">x</span><input type="checkbox"><label>${t}</label>`;
     document.getElementById('task').appendChild(node);
     container.parentNode.style.display = "block";
 };

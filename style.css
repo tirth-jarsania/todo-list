@@ -1,20 +1,18 @@
 html{
   height: 100%;
+  width: 100%;
   background-image: linear-gradient(lavender , indigo);
   background-repeat: no-repeat;
   font-family:'Courier New', Courier, monospace;
   background-size: auto;
-}
-
-.container-fluid{
-  width: 400px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin: auto;
 }
 
 .header-title{
+  margin : auto;
+  margin-bottom: 20px;
+  width: 30%;
   text-align: center;
   font-weight: bold;
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
@@ -22,39 +20,43 @@ html{
 }
 
 form{
+  margin : 0 auto;
+  width: 40%;
   background-color: #fff;
   padding: 15px;
+  border-radius: 10px;
 }
 form> input[type="text"]{
-  width: 310px;
-  height: 30px;
+  min-width: 60%;
+  height: 40px;
   outline: 0;
   border: none;
   font-size: 1em;
   background: #fff;
   color: #2f4f4f;
-  float:left;
+  margin-left: 10px;
+  border-radius: 10px;
+  
 }
 form > button{
   font-size: 1.5em;
-  color: #53BDFF;
-  background-color: #fff;
+  background-color: blue;
+  color: #fff;
   outline: 0;
   border: none;
-  width: 50px;
+  padding: 10px;
   float: right;
+  border-radius: 10px;
 }
 
-.add-task{
+
+#task{
   background-color: #fff;
   margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 40px;
-  display: none;
-}
-
-.task{
+  display: block;
   list-style: none;
 }
 
@@ -66,15 +68,12 @@ li{
   color: teal;
 }
 
-a{
-  float: right;
-  text-align: right;
-  color: tomato;
-  font-size: 1.2em;
-  cursor: pointer;
-}
+.line--done{
+  text-decoration: line-through;
+  text-decoration-color: #ff6161;;
 
-.delete-task{
+}
+.delete{
   background-color: #ff6161;
   padding: 0px 3px 0px 3px;
   color: #fff;
@@ -82,10 +81,6 @@ a{
 }
 
 @media (max-width: 500px) {
-  .main{
-    margin: auto;
-    width: 100%;
-  }
   input[type="text"]{
     width: 80%;
   }

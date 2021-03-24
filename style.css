@@ -57,6 +57,8 @@ form > button{
   padding-bottom: 10px;
   padding-right: 40px;
   display: block;
+  align-items: center;
+  width: 40%;
   list-style: none;
 }
 

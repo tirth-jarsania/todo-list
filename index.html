@@ -4,18 +4,25 @@
     <meta charset="utf-8">
     <title>todoApp</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
+    crossorigin="anonymous" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div id="root">
-      <h1 class="header-title">TodoMVC</h1>
-       <form action="index.html" method="post" autocomplete="off">
-          <input type="text" placeholder="add new task" name="task">
-          <button type="submit">Add</button>
+      <header>
+        <h1>TodoMVC</h1>
+      </header>
+      <form action="index.html" method="post" autocomplete="off">
+          <input type="text" placeholder="add new task"  class="todo-input">
+          <button type="submit" class ="todo-button">
+            <i class="fas fa-plus-square"></i>
+          </button>
         </form>
-          <ul id="task"></ul>
+        <div class="todo-container">
+          <ul class="todo-list" ></ul> 
         </div>
-      </div>
+          
+        </div>
       <script type="module" >
         import App from './src.js';
         App();

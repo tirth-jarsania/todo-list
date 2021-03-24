@@ -6,7 +6,9 @@
 class Model {
 
     constructor() {
-        this.todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos'))  : [];
+        this.todos = localStorage.getItem('todos') 
+                    ? JSON.parse(localStorage.getItem('todos')) 
+                    : [];
     }
 
     subscribeTodoListChanged( callback ) {

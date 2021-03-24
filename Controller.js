@@ -1,3 +1,4 @@
+
 /**
  * @class Controller
  * This class links the user and the system
@@ -5,6 +6,7 @@
  * For that firstly we must change our todos array which placed into Model class then we have to reflect onto screen
  * This view part placed at View class so here we have to bind both class. That's work basically happen into this class
  */
+
 class Controller {
     constructor(model, view) {
         this.model = model

@@ -10,7 +10,7 @@ class Model {
                     ? JSON.parse(localStorage.getItem('todos')) 
                     : [];
     }
-
+    
     subscribeTodoListChanged( callback ) {
         this.onTodoListChanged = callback
     }
@@ -26,7 +26,6 @@ class Model {
          item: task,
          done: false
      }
-     
      this.todos.push(todo);
      this._commit(this.todos)
     }

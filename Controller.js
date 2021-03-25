@@ -1,4 +1,3 @@
-
 /**
  * @class Controller
  * This class links the user and the system
@@ -17,7 +16,6 @@ class Controller {
         this.view.subscribeAddTodo(this.handleAddTodo)
         this.view.subscribeDeleteTodo(this.handleDeleteTodo)
         this.view.subscribeToggleTodo(this.handleToggleTodo)
-
     }
     onTodoListChanged = todos => {
         this.view.displayTodos(todos)

@@ -17,7 +17,7 @@ header {
   font-size: 1.5rem;
 }
 
-header , form{
+header , form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -52,7 +52,9 @@ form button:hover{
 
 .todo-list{
   min-width: 30%;
+  max-height: 600px;
   list-style: none;
+  overflow-y: scroll;
 }
 
 .todo{
@@ -61,6 +63,7 @@ form button:hover{
   color: black;
   font-size: 1.5rem;
   display: flex;
+  overflow-y: scroll;
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;  

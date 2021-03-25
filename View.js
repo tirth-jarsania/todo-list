@@ -1,3 +1,6 @@
+import addTodoItem from './addTodoItem.js';
+
+
 /**
  * @class View
  * This class is a a visual representation of the model
@@ -10,42 +13,13 @@ class View {
         this.form = this.getElement('form');
         this.input = this.getElement('input');
         this.todoList = this.getElement('.todo-list')
-        this.todoList.addEventListener("addTodoItem" ,(event) => {
-            const todoDiv = this.createElement('div','todo');
-            todoDiv.id = event.detail.id;
-
-            const newTodo = this.createElement('li','todo-item');
-            newTodo.innerText = event.detail.item;
-            todoDiv.appendChild(newTodo);
-
-            const completedButton = this.createElement('button', 'complete-btn');
-            completedButton.innerHTML = `<i class="fas fa-check"></i>`;
-            if(event.detail.done === true) 
-            {
-              todoDiv.classList.add('completed');
-              //console.log('tirth');
-            }
-            todoDiv.appendChild(completedButton);
-
-            
-            const trashButton = this.createElement('button', 'trash-btn');
-            trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
-            todoDiv.appendChild(trashButton);
-            
-            event.detail.arr.appendChild(todoDiv);
-          })
+        this.todoList.addEventListener( "addTodoItem" , addTodoItem )
     }
     get _todoText() {
         return this.input.value
     }
     _resetInput() {
         this.input.value = ''
-    }
-    createElement(tag, className) {
-        const element = document.createElement(tag)
-        if (className) element.classList.add(className)
-    
-        return element
     }
     getElement(selector) {
         return document.querySelector(selector)
@@ -57,17 +31,14 @@ class View {
       }
     }
     displayTodos( todos ) {
-        // Delete all nodes
         this._deleteTodoList();
-        // Show default message
         if (todos.length) {
-          // Create nodes
           todos.forEach(todo => {this.todoList.dispatchEvent(new CustomEvent("addTodoItem",{
               detail:{
                 id: todo.id,
                 item: todo.item,
                 done: todo.done,
-                arr: this.todoList,
+                arr: this.todoList
               }}))})
         }
     }
@@ -78,6 +49,9 @@ class View {
           if (this._todoText) {
             handler(this._todoText)
             this._resetInput()
+          }
+          else {            
+            alert('empty string is not validated')
           }
         })
     }

@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>todoApp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+     rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
     crossorigin="anonymous" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+<<<<<<< Updated upstream
       <header>
         <h1>TodoMVC</h1>
       </header>
@@ -27,6 +30,28 @@
         import App from './src.js';
         App();
       </script>
+=======
+    <header>
+        <h1>TodoMVC</h1>
+    </header>
+    <form autoComplete="off">
+      <input
+            type="text" 
+            placeholder="add new task"  
+            class="todo-input">
+      <button type="submit" 
+              class ="todo-button">
+              <i class="fas fa-plus-square"></i>
+      </button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+    <script type="module">
+      import todoMain  from './todoMain.js';
+      todoMain();
+    </script>
+>>>>>>> Stashed changes
   </body>
   
 </html>

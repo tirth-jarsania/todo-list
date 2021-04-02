@@ -1,5 +1,6 @@
 /**
  * @class Controller
+<<<<<<< Updated upstream
  * This class links the user and the system
  * Means user make some events let's assume that user click onto delete button for a specific task then this todo must be deleted 
  * For that firstly we must change our todos array which placed into Model class then we have to reflect onto screen
@@ -33,3 +34,39 @@ class Controller {
 
   export default Controller;
   
+=======
+ * The controller connects the model and the view. 
+ * It takes user input, such as clicking or typing,
+ *  and handles callbacks for user interactions.
+ */
+class Controller {
+    constructor(model, view) {
+      this.model = model
+      this.view = view
+  
+      this.model.bindTodoListChanged(this.onTodoListChanged)
+      this.view.subscribeAddTodo(this.handleAddTodo)
+      this.view.subscribeDeleteTodo(this.handleDeleteTodo)
+      this.view.subscribeToggleTodo(this.handleToggleTodo)
+      this.onTodoListChanged(this.model.todos)
+    }
+  
+    onTodoListChanged = todos => {
+      this.view.displayTodos(todos)
+    }
+  
+    handleAddTodo = todoText => {
+      this.model.addTodo(todoText)
+    }
+  
+    handleDeleteTodo = id => {
+      this.model.deleteTodo(id)
+    }
+  
+    handleToggleTodo = id => {
+      this.model.toggleTodo(id)
+    }
+  }
+
+  export default Controller;
+>>>>>>> Stashed changes

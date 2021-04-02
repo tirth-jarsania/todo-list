@@ -17,7 +17,11 @@ header {
   font-size: 1.5rem;
 }
 
+<<<<<<< Updated upstream
 header , form {
+=======
+header , form{
+>>>>>>> Stashed changes
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -67,6 +71,10 @@ form button:hover{
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;  
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
 }
 
 .todo > li {
